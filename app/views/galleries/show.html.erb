@@ -4,7 +4,7 @@
     <p><%= @gallery.description %></p>
   </div>
 
-  <div class="row justify-content-center mt-4">
+  <div class="row justify-content-center mt-2 gallery-background">
     <% @gallery.images.each do |image| %>
       <div class="col-12, col-sm-6 col-md-4 col-lg-3 mb-4 text-center gallery-item">
         <%= image_tag "galleries/#{image.filename}", alt: image.name, class: "img-fluid mx-auto d-block" %>
