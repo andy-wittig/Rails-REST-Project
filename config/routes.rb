@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :galleries
+  resources :images
   get "home/gallery"
   get "home/about"
   root 'home#index'
