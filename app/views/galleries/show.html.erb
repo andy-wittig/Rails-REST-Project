@@ -1,11 +1,15 @@
-<h1><%= @gallery.title %></h1>
-<p><%= @gallery.description %></p>
+<div class="container text-center">
+  <div class="border border-dark p-4 border-opacity-25">
+    <h1><%= @gallery.title %></h1>
+    <p><%= @gallery.description %></p>
+  </div>
 
-<div class="gallery">
-  <% @gallery.images.each do |image| %>
-    <div class = "gallery-item">
-      <%= image_tag "galleries/#{image.filename}", alt: image.name %>
-      <p><%= image.name %></p>
-    </div>
-    <% end %>
+  <div class="row justify-content-center mt-4">
+    <% @gallery.images.each do |image| %>
+      <div class="col-12, col-sm-6 col-md-4 col-lg-3 mb-4 text-center gallery-item">
+        <%= image_tag "galleries/#{image.filename}", alt: image.name, class: "img-fluid mx-auto d-block" %>
+        <p class="mt-2 fst-italic"><%= image.name %></p>
+      </div>
+      <% end %>
+  </div>
 </div>

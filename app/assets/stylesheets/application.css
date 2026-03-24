@@ -9,16 +9,25 @@
  * Consider organizing styles into separate files for maintainability.
  */
 
- .gallery
- {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 10px;
-}
-
 .gallery-item img
 {
-  width: 100%;
-  height: auto;
   border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.gallery-card
+{
+  border-radius: 32px;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+}
+
+#three-background 
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
 }

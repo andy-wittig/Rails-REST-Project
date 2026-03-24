@@ -1,3 +1,13 @@
-<% galleries.each do |gallery| %>
-    <h2><%= link_to gallery.title, gallery %></h2>
-<% end %>
+<div class="d-flex flex-wrap justify-content-center gap-4">
+    <% galleries.each do |gallery| %>
+        <div class="card" style="width: 18rem;">
+            <%= image_tag "galleries/#{gallery.images.first.filename}", class: "card-img-top gallery-card", alt: gallery.title if gallery.images.any? %>
+
+            <div class="card-body">
+                <h5 class="card-title"><%= gallery.title %></h5>
+                <p class="card-text"><%= gallery.description %></p>
+                <a><%= link_to "Visit", gallery, class: "btn btn-dark" %></a>
+            </div>
+        </div>
+    <% end %>
+</div>
