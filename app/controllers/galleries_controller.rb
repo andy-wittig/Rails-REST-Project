@@ -8,6 +8,7 @@ class GalleriesController < ApplicationController
 
   # GET /galleries/1 or /galleries/1.json
   def show
+    @gallery = Gallery.find(params[:id])
   end
 
   # GET /galleries/new
