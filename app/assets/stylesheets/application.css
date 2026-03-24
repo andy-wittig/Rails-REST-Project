@@ -26,6 +26,34 @@
     background-color: rgba(255, 255, 255, 0.5);
 }
 
+.paragraph-narrow
+{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.profile-image
+{
+    width: 256px;
+    height: 256px;
+    object-fit: cover;
+    animation: breathe 4s ease-in-out infinite;
+}
+
+@keyframes breathe 
+{
+    0%, 100% 
+    {
+        transform: scale(1);
+    }
+    50% 
+    {
+        transform: scale(1.025);
+    }
+}
+
 #three-background 
 {
   position: fixed;

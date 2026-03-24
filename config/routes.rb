@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   resources :galleries, only: [:index, :show]
   resources :images, only: [:index, :show]
   get "home/gallery"
-  get "home/about"
   root 'home#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
